@@ -1,0 +1,9 @@
+{
+    "require": {
+    	"ext-mongodb": "*",
+        "j7mbo/twitter-api-php": "^1.0",
+        "abraham/twitteroauth": "^1.1",
+        "symfony/var-dumper": "^5.0",
+        "symfony/dotenv": "^5.0"
+    }
+}
