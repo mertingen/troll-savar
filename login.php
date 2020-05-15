@@ -11,9 +11,10 @@ require 'vendor/autoload.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
 use Symfony\Component\Dotenv\Dotenv;
 
-
-$dotenv = new Dotenv();
-$dotenv->load(__DIR__.'/.env');
+if ($_ENV['IS_DEVELOPMENT']){
+    $dotenv = new Dotenv();
+    $dotenv->load(__DIR__.'/.env');
+}
 
 
 $connection = new TwitterOAuth($_ENV['CONSUMER_KEY'], $_ENV['CONSUMER_SECRET_KEY']);
